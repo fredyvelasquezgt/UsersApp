@@ -1,20 +1,10 @@
 import React, { useState } from 'react'
+import { useForm } from '../hooks/useForm';
 
 export const Formularios = () => {
+    const {formulario,email, password, onChange } = useForm();
 
-
-    const [formulario, setFormulario] = useState({
-        email: 'test@test.com',
-        password: '123456'
-    })
-
-    const onChange = (value:string, campo:string) => {
-        setFormulario({
-            ...formulario,
-            [campo]: value}
-        );
-    }
-
+   
     return (
         <>
          <h3>Formulario</h3> 
@@ -22,7 +12,7 @@ export const Formularios = () => {
          type="text"
          className="form-control"
          placeholder="email"
-         value={formulario.email}
+         value={email}
          onChange = {({target}) => onChange(target.value, 'email')}
           />
 
@@ -30,7 +20,7 @@ export const Formularios = () => {
          type="text"
          className="form-control mt-2 mb-2"
          placeholder="password"
-         value={formulario.password}
+         value={password}
          onChange = {({target}) => onChange(target.value, 'password')}
 
           />
