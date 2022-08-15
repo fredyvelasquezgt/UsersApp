@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useForm } from '../hooks/useForm';
 
 export const Formularios = () => {
-    const {formulario,email, password, onChange } = useForm();
+    const {formulario,email, password, onChange } = useForm({
+        email: 'test@test.com',
+        password: '123456'
+    });
 
    
     return (
