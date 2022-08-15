@@ -5,7 +5,9 @@
 // import { Funciones } from './typescript/Funciones';
 // import { Login } from './components/Login';
 
-import { Usuarios } from "./components/Usuarios"
+import { Formularios } from "./components/Formularios"
+
+// import { Usuarios } from "./components/Usuarios"
 
 const App = () => {
   return (
@@ -19,7 +21,8 @@ const App = () => {
         {/* <Contador /> */}
         {/* <ContadorConHook /> */}
         {/* <Login /> */}
-        <Usuarios />
+        {/* <Usuarios /> */}
+        <Formularios />
       </h1>
     </div>
   )
